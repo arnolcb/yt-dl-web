@@ -10,7 +10,7 @@ def descargar_video_youtube(url):
         'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
         'outtmpl': 'video.%(ext)s',  # Se descarga como video.mp4
         'quiet': True,
-        'cookiesfile': 'cookies.txt'
+        'cookies': 'cookies.txt'
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
